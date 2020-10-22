@@ -1,0 +1,32 @@
+<div class="login">
+    <div class="form-group">
+        <img src="https://library.kissclipart.com/20180918/ove/kissclipart-account-icon-clipart-computer-icons-user-profile-c-b43be10750a4eda5.png" alt="User" class="user-image">
+    </div>
+    
+    <form action="" [formGroup]="form" (ngSubmit)="submit()">
+        <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+              </div>
+              <input class="form-control" formControlName="email" placeholder="Email" type="email"   />
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" style="cursor: pointer;" (click)="showMyPassword()"><i [class]="showPassword?'fa fa-eye':'fa fa-eye-slash'"></i></span>
+              </div>
+              <input class="form-control" formControlName="password" placeholder="Password" [type]="showPassword?'text':'password'" #password />
+            </div>
+          </div>
+        <div class="form-group">
+            <input type="submit" value="LOGIN" class="btn btn-primary">
+        </div>
+     
+    </form>
+    <div class="form-group text-right">
+      <a href="javascript:void(0)" routerLink="/register">Create new account?</a>  
+    </div>
+</div>
+
