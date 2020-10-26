@@ -9,7 +9,7 @@ import { EMAIL_REGEX } from 'src/app/constant';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-data:any;
+
   form:FormGroup;
   submitted:boolean = false;
   showPassword:boolean = false;
@@ -28,12 +28,7 @@ data:any;
     }) 
   }
 
-  ngOnInit(): void {
-    
-    setTimeout(()=>{
-      this.data = 'hello';
-    },3000)
-  }
+  ngOnInit(): void {}
   submit(){
     console.log(this.form.valid)
     this.router.navigateByUrl(`/dashbord`)

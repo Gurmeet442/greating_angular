@@ -5,7 +5,7 @@
 body {
   font-family: tahoma;
   height: 100vh;
-  background-image: url('https://i.ytimg.com/vi/8LQSe_1D27I/maxresdefault.jpg');
+  background-image: url(https://picsum.photos/g/3000/2000);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -25,6 +25,10 @@ transition: 0.5s;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 box-shadow: 1px 1px 1px black, 0 5px 20px black;
 animation: myframe 2s ease-in-out 0s 1 ;
+}
+
+.head:hover{
+  transform: rotateX(360deg);
 }
 
 @keyframes myframe{
@@ -47,7 +51,7 @@ animation: myframe 2s ease-in-out 0s 1 ;
   background: rgba(0, 0, 0, 0.904);
 }
 
-.row{
+.how{
   
   position: relative;
   top: 30px;
@@ -58,10 +62,11 @@ animation: myframe 2s ease-in-out 0s 1 ;
 }
 .our-team {
   padding: 30px 0 40px;
+  left: 25vw;
   width: 50vw;
   margin-top: 40px;
   margin-bottom: 30px;
-  /* box-shadow: 0px 10px 1px #ddd, 0 5px 20px #ccc; */
+  box-shadow: 1px 1px 1px black, 0 5px 20px black;
   background-color: #fff;
   text-align: center;
   overflow: hidden;
@@ -179,7 +184,7 @@ animation: myframe 2s ease-in-out 0s 1 ;
   top: 100px;
   margin: auto;
   margin-bottom: 30px;
-  /* box-shadow: 0px 10px 1px #ddd, 0 5px 20px #ccc; */
+  box-shadow: 1px 1px 1px black, 0 5px 20px black;
   background-color: #fff;
   text-align: center;
   overflow: hidden;
@@ -211,6 +216,9 @@ animation: myframe 2s ease-in-out 0s 1 ;
     
     margin: auto;
   }
+  .register{
+    width: 90vw;
+  }
 }
 
 .form-control:focus{
@@ -229,6 +237,54 @@ input[type=submit] {
   cursor: pointer;
 }
 
+input[type=button] {
+  width: 100%;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 input[type=submit]:hover {
   background-color: #45a049;
+}
+
+.register{padding: 30px 0 40px;
+width: 35vw;
+left: 32vw;
+top: 50px;
+margin: auto;
+margin-bottom: 30px;
+box-shadow: 1px 1px 1px black, 0 5px 20px black;
+background-color: #fff;
+text-align: center;
+overflow: hidden;
+position: relative;
+padding: 30px;
+}
+@media(max-width:800px){
+  .register{
+    top: 50px;
+    width: 90vw;
+    left: 5vw;
+    
+  }
+}
+
+
+textarea:focus, 
+textarea.form-control:focus, 
+input.form-control:focus, 
+input[type=text]:focus, 
+input[type=password]:focus, 
+input[type=email]:focus, 
+input[type=number]:focus, 
+[type=text].form-control:focus, 
+[type=password].form-control:focus, 
+[type=email].form-control:focus, 
+[type=tel].form-control:focus, 
+[contenteditable].form-control:focus {
+  box-shadow: inset 0 -1px 0 #ddd;
 }

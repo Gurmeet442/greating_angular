@@ -1,1 +1,146 @@
-<p>register works!</p>
+<div class="register">
+    <div class="form-group">
+        <h3>Register</h3>
+    </div>
+    <br>
+    <form action="" [formGroup]="form" (ngSubmit)="submit()">
+        
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control " formControlName="firstName" placeholder="First name..." >
+                        <div *ngIf="form.controls['firstName'].hasError('required') && 
+                        form.controls['firstName'].touched" class="text-danger text-left">
+                            Please enter first name
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" formControlName="lastName" placeholder="Second name...">
+                        <div *ngIf="form.controls['lastName'].hasError('required') && 
+                        form.controls['lastName'].touched" class="text-danger text-left">
+                            Please enter last name
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                </div>
+                <input class="form-control" formControlName="email" placeholder="Email" type="email" />
+             
+            </div>
+            <div *ngIf="form.controls['email'].hasError('required') && 
+            form.controls['email'].touched" class="text-danger text-left ">
+                Please enter email
+            </div>
+            <div *ngIf="form.controls['email'].hasError('pattern') && 
+            form.controls['email'].touched" class="text-danger text-left">
+                Please enter valid email
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" style="cursor: pointer;"><i class="fa fa-lock"></i></span>
+                </div>
+                <input class="form-control" formControlName="password" placeholder="Password" type="password"
+                    #password />
+                   
+            </div>
+            <div *ngIf="form.controls['password'].hasError('required') && 
+            form.controls['password'].touched" class="text-danger text-left">
+                Please enter password
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fa fa-whatsapp"></i></span>
+                </div>
+                <input class="form-control" formControlName="phone" placeholder="Phone number..." type="tel" />
+               
+            </div>
+            <div *ngIf="form.controls['phone'].hasError('required') && 
+            form.controls['phone'].touched" class="text-danger text-left">
+                Please enter phone number
+            </div>
+            <div *ngIf="form.controls['phone'].hasError('pattern') && 
+            form.controls['phone'].touched" class="text-danger text-left">
+                Please enter valid phone number
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-6">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-instagram"></i></span>
+                        </div>
+                        <input class="form-control" formControlName="instagramLink" placeholder="Instagram link..."
+                            type="text" />
+                            <div *ngIf="form.controls['instagramLink'].hasError('required') && 
+                            form.controls['instagramLink'].touched" class="text-danger text-left">
+                                Please enter instagram link
+                            </div>
+                       
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-facebook"></i></span>
+                        </div>
+                        <input class="form-control" formControlName="facebookLink" placeholder="facebook Link..."
+                            type="text" />
+                            <div *ngIf="form.controls['facebookLink'].hasError('required') && 
+                            form.controls['facebookLink'].touched" class="text-danger text-left">
+                                Please enter facebook link
+                            </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroupFileAddon01"><i class="fa fa-image"></i></span>
+                </div>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" formControlName="image" id="inputGroupFile01"
+                    aria-describedby="inputGroupFileAddon01" (change)="imageSelect($event)">
+                  <label class="custom-file-label" for="inputGroupFile01" style="padding-right: 200px;">{{image}}</label>
+                </div>
+                
+            </div>
+            <div *ngIf="form.controls['image'].hasError('required') && 
+            form.controls['image'].touched" class="text-danger text-left">
+                Please select profile image
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <input type="submit" value="LOGIN" class="btn btn-primary">
+                    </div>
+                </div>
+                
+                <div class="col-6">
+                    <div class="form-group">
+                        <input type="button" value="Close" class="btn btn-danger">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </form>
+
+</div>
